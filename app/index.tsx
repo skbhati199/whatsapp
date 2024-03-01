@@ -7,15 +7,16 @@ import {
   Linking,
 } from "react-native";
 import React from "react";
-import welcomeImage from "@/assets/images/welcome.png";
 import Colors from "@/constants/Colors";
-import { Link } from "expo-router";
+import welcomeImage from "@/assets/images/welcome.png";
 const welcome_image = Image.resolveAssetSource(welcomeImage).uri;
 import * as WebBrowser from "expo-web-browser";
 
 import { useWarmUpBrowser } from "../hooks/useWarmUpBrowser";
+import { Link } from "expo-router";
  
 WebBrowser.maybeCompleteAuthSession();
+
 const Page = () => {
   useWarmUpBrowser();
 

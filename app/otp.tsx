@@ -62,7 +62,7 @@ const Page = () => {
       router.push(`/verify/${phoneNumber}`);
     } catch (error) {
       if (isClerkAPIResponseError(error)) {
-        if (error.errors[0].code === "from_identifier_exists") {
+        if (error.errors[0].code === "form_identifier_exists") {
           console.log("User already exists");
           await trySignIn();
         } else {
